@@ -8,8 +8,12 @@ How to run
 
 - with gradle: 
 ```bash
-gradle clean :features-example:bootRun`
+gradle clean :features-example:bootRun
 ```
+
+https://reflectoring.io/spring-boot-dev-tools/
+
+
 - with maven:
 ```bash
 mvn clean spring-boot:run -pl features-example

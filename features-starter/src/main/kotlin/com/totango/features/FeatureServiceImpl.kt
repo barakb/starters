@@ -2,9 +2,9 @@ package com.totango.features
 
 import reactor.core.publisher.Mono
 
+
 @Suppress("unused")
 class FeatureServiceImpl(
-    private val featureRepository: FeatureRepository,
     private val featuresCache: FeaturesCache
 ) : FeatureService {
 

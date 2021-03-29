@@ -1,7 +1,6 @@
 package com.totango.features
 
 import org.springframework.cache.annotation.Cacheable
-import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories
 import org.springframework.stereotype.Component
 import reactor.core.publisher.Mono
 

@@ -44,21 +44,21 @@ class ConfigDbAutoConfiguration {
 
     @Bean
     @Qualifier("config")
+    fun configureDatabaseClient(@Qualifier("config") connectionFactory: ConnectionFactory): DatabaseClient {
+        return DatabaseClient.builder()
+            .connectionFactory(connectionFactory)
+            .build()
+    }
+
+    @Bean
+    @Qualifier("config")
     fun configEntityTemplate(
-        @Qualifier("config") connectionFactory: ConnectionFactory,
         @Qualifier("config") databaseClient: DatabaseClient
     ): R2dbcEntityOperations {
         val strategy = DefaultReactiveDataAccessStrategy(MySqlDialect.INSTANCE)
         return R2dbcEntityTemplate(databaseClient, strategy)
     }
 
-    @Bean
-    @Qualifier("config")
-    fun configureDatabaseClient(@Qualifier("config") connectionFactory: ConnectionFactory): DatabaseClient {
-        return DatabaseClient.builder()
-            .connectionFactory(connectionFactory)
-            .build()
-    }
 
     companion object {
         private val logger = LoggerFactory.getLogger(ConfigDbAutoConfiguration::class.java)

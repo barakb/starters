@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-autoconfigure")
+    implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-cache")
     implementation(project(":configdb-starter"))
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
