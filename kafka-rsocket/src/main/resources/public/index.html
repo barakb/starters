@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>RSocket Demo</title>
+</head>
+
+<body>
+
+<div style="margin-top: 20px;">
+  <button id="request-response" type="button" disabled="disabled">request-response</button>
+   <span> reply: </span>
+   <span id="request-reply"></span>
+</div>
+
+<div style="margin-top: 20px;">
+    <button id="fire-and-forget" type="button" disabled="disabled">fire-and-forget</button>
+</div>
+
+<div style="margin-top: 20px;">
+    <button id="stream" type="button" disabled="disabled">stream</button>
+    <span>current element: </span>
+    <span id="current-stream-element"></span>
+</div>
+
+<div style="margin-top: 20px;">
+    <button id="kafka-subscribe" type="button" disabled="disabled">kafka-subscribe</button>
+    <select id="request-size">
+        <option value="1">1</option>
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+        <option value="5000">5000</option>
+    </select>
+    request sized
+    <br>
+    <span>current event: </span>
+    <span id="current-kafka-event"></span>
+</div>
+
+<div style="margin-top: 20px;">
+    <button id="publish" type="button" disabled="disabled">publish</button>
+    <select id="events">
+        <option value="2">2</option>
+        <option value="10">10</option>
+        <option value="100">100</option>
+        <option value="1000">1000</option>
+        <option value="50000">50000</option>
+        <option value="200000">200000</option>
+    </select>
+    events
+</div>
+
+
+<p>
+</p>
+
+<script src="app.js"></script>
+</body>
+
+</html>

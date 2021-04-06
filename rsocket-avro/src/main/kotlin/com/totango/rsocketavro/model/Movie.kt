@@ -1,4 +1,4 @@
-package com.totango.rsocketavro
+package com.totango.rsocketavro.model
 
 import java.util.*
 
@@ -14,5 +14,5 @@ data class TicketRequest(
 
 data class MovieScene(
     private val sceneId: Int = 0,
-    private val sceneDescription: String? = null
+    val sceneDescription: String? = null
 )

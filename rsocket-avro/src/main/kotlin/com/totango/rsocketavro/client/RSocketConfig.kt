@@ -1,5 +1,7 @@
+package com.totango.rsocketavro.client
+
 import io.rsocket.core.RSocketConnector
-import io.rsocket.transport.netty.client.TcpClientTransport
+import io.rsocket.transport.netty.client.WebsocketClientTransport
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.codec.Decoder
@@ -40,6 +42,7 @@ class RSocketConfig {
                 )
             }
             .dataMimeType(MediaType.APPLICATION_CBOR)
-            .transport(TcpClientTransport.create(6565))
+//            .transport(TcpClientTransport.create(6565))
+            .transport(WebsocketClientTransport.create(6565))
     }
 }

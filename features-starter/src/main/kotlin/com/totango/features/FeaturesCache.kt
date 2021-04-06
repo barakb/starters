@@ -10,6 +10,7 @@ class FeaturesCache(private val featureRepository: FeatureRepository) {
     @Cacheable(cacheNames = ["service_features"], sync = true)
     fun getAllFeatures(serviceId: String): Mono<Map<String, Boolean>> =
         featureRepository.getAllFeatures(serviceId).map {
+//            println("feature: ${it.feature} enabled: ${it.enabled}")
             (it.feature to (it.enabled != 0))
         }.collectList().map { it.toMap() }.cache()
 

@@ -17,7 +17,7 @@ class Application
 
 @Suppress("unused")
 @Component
-class Runner(private val service: FeatureService) : `ApplicationRunner` {
+class Runner(private val service: FeatureService) : ApplicationRunner {
 
     override fun run(args: ApplicationArguments) {
         service.isFeatureEnabled("880", FeatureFlag.ACCOUNT_ACTIVITY_AGG_UNESCAPED_QUOTES)
@@ -28,6 +28,9 @@ class Runner(private val service: FeatureService) : `ApplicationRunner` {
             .doOnNext {
                 logger.info("2nd time, feature enabled = $it")
             }.block()
+
+        logger.info("calling isFeatureEnabledBlock")
+        service.isFeatureEnabledBlock("880", FeatureFlag.ACCOUNT_ACTIVITY_AGG_UNESCAPED_QUOTES)
 
     }
 

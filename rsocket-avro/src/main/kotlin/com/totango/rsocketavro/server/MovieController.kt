@@ -1,5 +1,8 @@
-package com.totango.rsocketavro
+package com.totango.rsocketavro.server
 
+import com.totango.rsocketavro.model.MovieScene
+import com.totango.rsocketavro.model.TicketRequest
+import com.totango.rsocketavro.model.TicketStatus
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.messaging.handler.annotation.MessageMapping
@@ -17,7 +20,7 @@ class MovieController(private val movieService: MovieService) {
         request
             .doOnNext { t: TicketRequest -> t.status = TicketStatus.TICKET_CANCELLED }
             .doOnNext { t: TicketRequest ->
-                logger.info("cancelTicket :: ${t.requestId.toString()} : ${t.status}")
+                logger.info("cancelTicket :: ${t.requestId} : ${t.status}")
             }
             .subscribe()
     }
