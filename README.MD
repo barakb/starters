@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/barakb/tarters.svg?branch=master)](https://travis-ci.org/barakb/tarters)
 ### An example of reactive feature flag spring boot starter 
 
 * configdb-starter a starter that ease the consumption of config db.
@@ -6,7 +7,7 @@
 
 How to run
 
-- with gradle: 
+
 ```bash
 gradle clean :features-example:bootRun
 ```
@@ -14,7 +15,3 @@ gradle clean :features-example:bootRun
 https://reflectoring.io/spring-boot-dev-tools/
 
 
-- with maven:
-```bash
-mvn clean spring-boot:run -pl features-example
-```
