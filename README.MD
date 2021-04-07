@@ -24,7 +24,7 @@ Based on https://stremler.io/2020-05-31-rsocket-messaging-with-spring-boot-and-r
 * from the js dir type npm install to install all dependencies
 * from the same dir run `npm run build` (yes it is awkward I know) this build the app.js in the resources/public dir
 * run the spring boot app with `gradle  :kafka-rsocket:bootRun`
-* Install kafka locally and create the topic events
+* Install kafka locally and create the topic events (https://projectreactor.io/docs/kafka/release/reference/#_getting_started)
 
 #### How to run
 Open a browser at http://localhost:8080
@@ -34,5 +34,7 @@ You will see.
 ### An example of rsocket and Avro - not ready yet.
 * rsocket-avro
 #### How to run 
-`gradle  :rsocket-avro:bootRun`
+```bash
+gradle  :rsocket-avro:bootRun
+```
 
