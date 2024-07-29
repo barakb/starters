@@ -25,7 +25,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 //	implementation("io.confluent:kafka-avro-serializer:5.3.0")
-	implementation("com.github.avro-kotlin.avro4k:avro4k-core:1.1.0") // <
+	implementation("com.github.avro-kotlin.avro4k:avro4k-core:1.10.1") // <
 	implementation("org.apache.avro:avro:1.10.2")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
