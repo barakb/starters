@@ -19,7 +19,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-    runtimeOnly("com.github.jasync-sql:jasync-r2dbc-mysql:1.1.7")
+    runtimeOnly("com.github.jasync-sql:jasync-r2dbc-mysql:1.2.3")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
 }
